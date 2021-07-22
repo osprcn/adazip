@@ -19,7 +19,7 @@ public class Application {
 //		SpringApplication.run(Application.class, args);
 
 		InputReader inputReader = new InputReader();
-		List<String> inputs = inputReader.readFile("/home/chhavi/dev/adazip/inpurt/app_input.txt");
+		List<String> inputs = inputReader.readFile("./inpurt/app_input.txt");
 
 		for (String str: inputs) {
 			System.out.println(str);
