@@ -1,26 +1,13 @@
 package org.zip.adazip.reader;
 
 import java.io.*;
-import java.nio.file.InvalidPathException;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InputReader {
-    //check the path is valid or not then add this valid in inputlist
-    public static boolean isValidFilePath(String path) {
-        File f = new File(path);
-        try {
-            f.getCanonicalPath();
-            return f.exists();
-        } catch (IOException e) {
-            return false;
-        } finally {
-            f = null;
-        }
-    }
+public class TxtReader extends InputFileReader {
 
     // get the user input file name ie. app_input.txt
+    //this method return as List<String> bcz inside the filepath all exits path is consider as string
     public List<String> readFile(String filePath) {
         File file = new File(filePath);
         List<String> inputFiles = new ArrayList<>();
@@ -33,6 +20,7 @@ public class InputReader {
                 //each read path take as string (inside the path line by line )
                 String path;
                 while ((path = br.readLine()) != null) {
+                    //check that string(inside the inputfiles) is correct path path or not
                     boolean isPathExist = isValidFilePath(path) ;
                     if(isPathExist){
                         //inside txt file is exit then add in result output(inputFiles)
@@ -54,5 +42,6 @@ public class InputReader {
         }
         return inputFiles;
     }
+
 
 }
