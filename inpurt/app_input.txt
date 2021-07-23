@@ -1,2 +1,5 @@
-/home/chhavi/Documents/6thSem
+/home/chhavi/Documents/
 /home/chhavi/dev/data-flick
+/home/chhavi/dev/data-flick123
+/home/nidhi/tools/idea-IC-203.7148.57/bin
+/home/nidhi/codefile
