@@ -3,9 +3,12 @@
     "size": 5,
     "format": "KB"
   },
-  "files":[
+  "input_files":[
     "/dev/code",
     "/dev/data-flick",
-    "/home/nidhi/tools/idea-IC-203.7148.57/bin"
-  ]
+    "/home/nidhi/tools/idea-IC-203.7148.57/bin",
+    "/home/nidhi/Desktop",
+    "/home/nidhi/Documents/Codechef"
+  ],
+  "output_dir": "/home/nidhi/dev/adazip/output"
 }

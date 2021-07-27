@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonReader extends InputFileReader {
+
     public  AppRequest inputJsonFile(String path){
         AppRequest request=null;
         try {
@@ -17,9 +18,9 @@ public class JsonReader extends InputFileReader {
             // convert JSON string to request object(Apprequest)
             request = mapper.readValue(Paths.get(path).toFile(), AppRequest.class);
 
-            List<String> files = request.getFiles();
+            List<String> InputFiles = request.getInputFiles();
             List<String> validFiles = new ArrayList<>();
-            for(String file : files) {
+            for(String file : InputFiles) {
                 if(isValidFilePath(file)){
                     validFiles.add(file);
                 } else {
@@ -27,7 +28,7 @@ public class JsonReader extends InputFileReader {
                 }
             }
 
-            request.setFiles(validFiles);
+            request.setInputFiles(validFiles);
             // print book
             System.out.println(request);
 
